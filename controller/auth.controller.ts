@@ -140,9 +140,9 @@ class AuthController{
         }
         await Temp.create(tempData);
         const link = `${process.env.FRONTEND_URL as string}verifymail/?email=${userMail}&otp=${otp}`
-        const mail = `Thank you for registering  on mainstackauth your otp is ${otp}, link: ${link}`;
+        const message = `Thank you for registering  on mainstackauth your otp is ${otp}, link: ${link}`;
         const subject = 'Verification-Mail'
-        await messages.sendMail(mail, userMail,subject)
+        await messages.sendMail(message, userMail,subject)
         const data = 'OTP sent successfully'
         return SuccessResponse(res, {data, link})
 

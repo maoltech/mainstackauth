@@ -26,7 +26,7 @@ class Messages {
         }
     };
 
-    public sendMail = async (mail: string, message: string, subject: string) => {
+    public sendMail = async (text: string, to: string, subject: string) => {
         try{
             const mailgun = new Mailgun(formData);
             const mg = mailgun.client({

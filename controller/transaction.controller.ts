@@ -87,7 +87,7 @@ class TransactionController {
                             Regards,
                             Your Bank
                         `;
-            await messages.sendMail(userMail, message, "Debit Bank Transfer Notification")
+            await messages.sendMail(message, userMail, "Debit Bank Transfer Notification")
             return SuccessResponse(res, response)
            }
 

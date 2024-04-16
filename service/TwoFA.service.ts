@@ -12,7 +12,7 @@ class TwoFA{
 
         const message = `Your OTP (One-Time Password) for verification is: ${token}`;
 
-        messages.sendMail(userMail, message, 'OTP Verification')
+        messages.sendMail(message, userMail, 'OTP Verification')
 
     };
 
